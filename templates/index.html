@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Of Pets</title>
+    <meta name="description" content="Web site about pets">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="About_us.html" as="document">
+
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="About_us.html" class="navegacion__enlace">About us</a>
+                    <a href="connections.html" class="navegacion__enlace">Connections</a>
+                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Match with your dream pet</h2>
+            <p class="no-margin">Find your pet on our friendly website</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="About_us">
+            <h3>Home</h3>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy"  srcset="img/some.jpg" type="image/jpg">
+                        <img loading="lazy" src="img/some.jpg" alt="imagen blog"> 
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Somes Pets</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
+                    <a href="pets.html" class="boton boton--primario">More</a>
+                </div>
+            </article>
+
+        </main>
+        <aside class="sidebar">
+            <h3>Search</h3>
+
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Fundations</h4>
+                    <p>La Perla - Animal Welfare Center</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.384202352156!2d-75.636524!3d6.2180149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc64f455ca91ce9e!2sCentro%20De%20Bienestar%20Animal%20La%20Perla!5e0!3m2!1ses-419!2sco!4v1634243241612!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                    <a href="map.html" class="boton boton--secundario">More Fundations</a>
+                </li>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">Pet Shelters</h4>
+                    <a href="map2.html" class="boton boton--secundario">More Pet Shelters</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="About_us.html" class="navegacion__enlace">About us</a>
+                    <a href="connections.html" class="navegacion__enlace">Connections</a>
+                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/modernizr.js"></script>
+</body>
+</html>

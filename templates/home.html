@@ -7,17 +7,16 @@
     <meta name="description" content="Web site about pets">
 
     <!-- Prefetch -->
-    <link rel="prefetch" href="About_us.html" as="document">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" as="document">
     <!-- Preload -->
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
@@ -25,14 +24,14 @@
 
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
+                <a class="logo" href="{{ url_for('home') }}">
+                    <h1 class="logo__nombre no-margin centrar-texto" >House<span class="logo__bold" >OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="About_us.html" class="navegacion__enlace">About us</a>
-                    <a href="connections.html" class="navegacion__enlace">Connections</a>
-                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
+                    <a href="{{ url_for('connections') }}" class="navegacion__enlace">Connections</a>
+                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
                 </nav>
             </div>
         </div>
@@ -50,8 +49,8 @@
             <article class="entrada">
                 <div class="entrada__imagen">
                     <picture>
-                        <source loading="lazy"  srcset="img/some.jpg" type="image/jpg">
-                        <img loading="lazy" src="img/some.jpg" alt="imagen blog"> 
+                        <source loading="lazy"  srcset="{{ url_for('static', filename='img/some.jpg') }}" type="image/jpg">
+                        <img loading="lazy" src="{{ url_for('static', filename='img/some.jpg') }}" alt="imagen blog"> 
                     </picture>
                 </div>
 
@@ -84,14 +83,14 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo" href="{{ url_for('home') }}">
                     <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="About_us.html" class="navegacion__enlace">About us</a>
-                    <a href="connections.html" class="navegacion__enlace">Connections</a>
-                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
+                    <a href="{{ url_for('connections') }}" class="navegacion__enlace">Connections</a>
+                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
                 </nav>
             </div>
         </div>

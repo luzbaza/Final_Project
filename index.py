@@ -8,15 +8,15 @@ def home():
 
 @app.route('/about us')
 def about_us():
-	return 'about us yes!'
+	return render_template('About_us.html')
 
 @app.route('/connections')
 def connections():
-	return 'connections'
+	return render_template('connections.html')
 
 @app.route('/contac')
 def contac():
-	return 'contac'
+	return render_template('contac.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)

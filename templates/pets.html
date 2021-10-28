@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Of Pets</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
@@ -14,14 +14,14 @@
 
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo" href="{{ url_for('home') }}">
                     <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="About_us.html" class="navegacion__enlace">About us</a>
-                    <a href="connections.html" class="navegacion__enlace">Connections</a>
-                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
+                    <a href="{{ url_for('connections') }}" class="navegacion__enlace">Connections</a>
+                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
                 </nav>
             </div>
         </div>
@@ -35,7 +35,7 @@
     <main class="contenedor">
         <h3 class="centrar-texto">Pets</h3>
 
-        <img src="img/somepets (1).jpg" alt="imagen del blog">
+        <img src="{{ url_for('static', filename='img/somepets (1).jpg') }}" alt="imagen del blog">
 
         <p>Etiam pulvinar, quam in iaculis viverra, nibh leo tempor sem, vitae bibendum quam neque vel magna. Nunc id maximus elit. Etiam fermentum tristique lacus eu pulvinar. Vivamus scelerisque varius sem. Aliquam sem ante, pretium eget congue a, vehicula ut ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi nec tincidunt odio. Integer vehicula efficitur nisi sed aliquet. Aliquam aliquam finibus placerat. Mauris consectetur, mauris nec hendrerit efficitur, justo augue placerat odio, a condimentum ante metus et elit. Etiam non massa dui. In vitae tortor sed leo egestas posuere non id tortor. Quisque nec gravida dui. Sed vitae massa mollis, porta felis sed, fringilla odio.</p>
 
@@ -47,19 +47,19 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo" href="{{ url_for('home') }}">
                     <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="About_us.html" class="navegacion__enlace">About us</a>
-                    <a href="connections.html" class="navegacion__enlace">Connections</a>
-                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
+                    <a href="{{ url_for('connections') }}l" class="navegacion__enlace">Connections</a>
+                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
                 </nav>
             </div>
         </div>
     </footer>
     
-    <script src="js/modernizr.js"></script>
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
 </body>
 </html>

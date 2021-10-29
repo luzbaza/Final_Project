@@ -1,0 +1,45 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form action="/registration" method="POST">
+
+	<input type="text" name="Name" placeholder="Name">
+	<input type="text" name="Phone" placeholder="Phone">
+	<input type="text" name="Email" placeholder="Email">
+	<input type="text" name="Address" placeholder="Address">
+	<button type="submit">
+		Save
+	</button>
+</form>
+
+
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Phone</td>
+			<td>Email</td>
+			<td>Address</td>
+			<td>Operations</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for user in users %}
+		<tr>
+			<td>{{ user.1 }}</td>
+			<td>{{ user.2 }}</td>
+			<td>{{ user.3 }}</td>
+			<td>{{ user.4 }}</td>
+			<td>
+				<a href="/edit/{{ user.0}}">Edit</a>
+				<a href="/delete/{{ user.0}}">Delete</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

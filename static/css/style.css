@@ -9,7 +9,7 @@
 }
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10px */    
+    font-size: 62.5%; /* 1 rem = 10px */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -59,12 +59,12 @@ img {
 }
 
 /** Header **/
-.webp .header {
-    background-image: url('background.jpg');
-}
-.no-webp .header {
+.header {
     background-image: url(../img/background.jpg);
 }
+/** .no-webp .header {
+    background-image: url(../img/background.jpg);
+}**/
 .header {
     height: 60rem;
     background-size: cover;

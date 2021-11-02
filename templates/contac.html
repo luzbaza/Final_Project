@@ -1,12 +1,19 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Of Pets</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,14 +21,14 @@
 
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="{{ url_for('home') }}">
+                <a class="logo" href="index.html">
                     <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
-                    <a href="{{ url_for('connections') }}" class="navegacion__enlace">Connections</a>
-                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
+                    <a href="About_us.html" class="navegacion__enlace">About us</a>
+                    <a href="connections.html" class="navegacion__enlace">Connections</a>
+                    <a href="sign_in.html" class="navegacion__enlace">Sign in</a>
                 </nav>
             </div>
         </div>
@@ -33,18 +40,29 @@
     </header>
 
     <main class="contenedor">
-        <h3 class="centrar-texto">Contact</h3>
+        <h3 class="centrar-texto">Contacto</h3>
 
         <div class="contacto-bg"></div>
 
-        <form class="formulario">
+
+        <form class="formulario" action="/registration" method="POST">
+
             <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
+                <label class="campo__label" for="name">Name</label>
                 <input 
                     class="campo__field"
                     type="text" 
-                    placeholder="Tu Nombre" 
+                    placeholder="Your name" 
                     id="nombre"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="phone">Phone</label>
+                <input 
+                    class="campo__field"
+                    type="numeber" 
+                    placeholder="Your phone" 
+                    id="email"
                 >
             </div>
             <div class="campo">
@@ -52,20 +70,22 @@
                 <input 
                     class="campo__field"
                     type="email" 
-                    placeholder="Tu E-mail" 
+                    placeholder="Your E-mail" 
                     id="email"
                 >
             </div>
             <div class="campo">
-                <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea 
-                    class="campo__field campo__field--textarea"
-                    id="mensaje"
-                ></textarea>
+                <label class="campo__label" for="address">Address</label>
+                <input 
+                    class="campo__field"
+                    type="email" 
+                    placeholder="Your address" 
+                    id="email"
+                >
             </div>
 
             <div class="campo">
-                <input type="submit" value="Enviar" class="boton boton--primario">
+                <input type="submit" value="Submit" class="boton boton--primario">
             </div>
         </form>
 
@@ -75,14 +95,14 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="{{ url_for('home') }}">
+                <a class="logo" href="index.html">
                     <h1 class="logo__nombre no-margin centrar-texto">House<span class="logo__bold">OfPets</span></h1>
                 </a>
 
                 <nav class="navegacion">
-                    <a href="{{ url_for('about_us') }}" class="navegacion__enlace">About us</a>
-                    <a href="{{ url_for('connections') }}" class="navegacion__enlace">Connections</a>
-                    <a href="{{ url_for('contac') }}" class="navegacion__enlace">Contac</a>
+                    <a href="About_us.html" class="navegacion__enlace">About us</a>
+                    <a href="connections.html" class="navegacion__enlace">Connections</a>
+                    <a href="sign_in.html" class="navegacion__enlace">Sign in</a>
                 </nav>
             </div>
         </div>

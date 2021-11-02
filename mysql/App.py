@@ -35,17 +35,7 @@ def registration():
         flash('has been successfully registered')
         return redirect(url_for('Index'))
 
-@app.route('/edit')
-def edit():
-    return 'edit'
 
-@app.route('/delete/<string:id>')
-def delete_user(id):
-    cur = mysql.connection.cursor()
-    cur.execute('DELETE FROM Users WHERE id = {0}'.format(id))
-    mysql.connection.commit()
-    flash('User Successfully Removed')
-    return redirect(url_for('Index'))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

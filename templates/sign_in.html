@@ -21,7 +21,7 @@
                 <nav class="navegacion">
                     <a href="About_us.html" class="navegacion__enlace">About us</a>
                     <a href="connections.html" class="navegacion__enlace">Connections</a>
-                    <a href="contac.html" class="navegacion__enlace">Contac</a>
+                    <a href="sign_in.html" class="navegacion__enlace">Sign in</a>
                 </nav>
             </div>
         </div>
@@ -37,14 +37,25 @@
 
         <div class="contacto-bg"></div>
 
-        <form class="formulario">
+
+        <form class="formulario" action="/registration" method="POST">
+
             <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
+                <label class="campo__label" for="name">Name</label>
                 <input 
                     class="campo__field"
                     type="text" 
-                    placeholder="Tu Nombre" 
+                    placeholder="Your name" 
                     id="nombre"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="phone">Phone</label>
+                <input 
+                    class="campo__field"
+                    type="numeber" 
+                    placeholder="Your phone" 
+                    id="email"
                 >
             </div>
             <div class="campo">
@@ -52,20 +63,22 @@
                 <input 
                     class="campo__field"
                     type="email" 
-                    placeholder="Tu E-mail" 
+                    placeholder="Your E-mail" 
                     id="email"
                 >
             </div>
             <div class="campo">
-                <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea 
-                    class="campo__field campo__field--textarea"
-                    id="mensaje"
-                ></textarea>
+                <label class="campo__label" for="address">Address</label>
+                <input 
+                    class="campo__field"
+                    type="email" 
+                    placeholder="Your address" 
+                    id="email"
+                >
             </div>
 
             <div class="campo">
-                <input type="submit" value="Enviar" class="boton boton--primario">
+                <input type="submit" value="Submit" class="boton boton--primario">
             </div>
         </form>
 
